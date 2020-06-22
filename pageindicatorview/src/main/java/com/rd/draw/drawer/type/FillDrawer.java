@@ -1,8 +1,11 @@
 package com.rd.draw.drawer.type;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+
 import androidx.annotation.NonNull;
+
 import com.rd.animation.data.Value;
 import com.rd.animation.data.type.FillAnimationValue;
 import com.rd.draw.data.Indicator;
@@ -11,7 +14,7 @@ public class FillDrawer extends BaseDrawer {
 
     private Paint strokePaint;
 
-    public FillDrawer(@NonNull Paint paint, @NonNull Indicator indicator) {
+    public FillDrawer(@NonNull Paint paint, @NonNull Indicator indicator, @NonNull Context context) {
         super(paint, indicator);
 
         strokePaint = new Paint();

@@ -6,6 +6,8 @@
     <color name="black">#000000</color>
     <item name="black_10_transparent" type="color">#1A000000</item>
 
+    <color name="soshopBackground">#EAEBF3</color>
+    <color name="soshopPrimary">#B92667</color>
     <color name="white">#ffffff</color>
 
     <color name="gray_50">#FAFAFA</color>

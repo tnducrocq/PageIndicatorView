@@ -1,59 +1,62 @@
 package com.rd.draw.drawer.type;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+
 import androidx.annotation.NonNull;
+
 import com.rd.animation.data.Value;
 import com.rd.animation.data.type.ScaleAnimationValue;
 import com.rd.draw.data.Indicator;
 
 public class ScaleDownDrawer extends BaseDrawer {
 
-	public ScaleDownDrawer(@NonNull Paint paint, @NonNull Indicator indicator) {
-		super(paint, indicator);
-	}
+    public ScaleDownDrawer(@NonNull Paint paint, @NonNull Indicator indicator, @NonNull Context context) {
+        super(paint, indicator);
+    }
 
-	public void draw(
-			@NonNull Canvas canvas,
-			@NonNull Value value,
-			int position,
-			int coordinateX,
-			int coordinateY) {
+    public void draw(
+            @NonNull Canvas canvas,
+            @NonNull Value value,
+            int position,
+            int coordinateX,
+            int coordinateY) {
 
-		if (!(value instanceof ScaleAnimationValue)) {
-			return;
-		}
+        if (!(value instanceof ScaleAnimationValue)) {
+            return;
+        }
 
-		ScaleAnimationValue v = (ScaleAnimationValue) value;
-		float radius = indicator.getRadius();
-		int color = indicator.getSelectedColor();
+        ScaleAnimationValue v = (ScaleAnimationValue) value;
+        float radius = indicator.getRadius();
+        int color = indicator.getSelectedColor();
 
-		int selectedPosition = indicator.getSelectedPosition();
-		int selectingPosition = indicator.getSelectingPosition();
-		int lastSelectedPosition = indicator.getLastSelectedPosition();
+        int selectedPosition = indicator.getSelectedPosition();
+        int selectingPosition = indicator.getSelectingPosition();
+        int lastSelectedPosition = indicator.getLastSelectedPosition();
 
-		if (indicator.isInteractiveAnimation()) {
-			if (position == selectingPosition) {
-				radius = v.getRadius();
-				color = v.getColor();
+        if (indicator.isInteractiveAnimation()) {
+            if (position == selectingPosition) {
+                radius = v.getRadius();
+                color = v.getColor();
 
-			} else if (position == selectedPosition) {
-				radius = v.getRadiusReverse();
-				color = v.getColorReverse();
-			}
+            } else if (position == selectedPosition) {
+                radius = v.getRadiusReverse();
+                color = v.getColorReverse();
+            }
 
-		} else {
-			if (position == selectedPosition) {
-				radius = v.getRadius();
-				color = v.getColor();
+        } else {
+            if (position == selectedPosition) {
+                radius = v.getRadius();
+                color = v.getColor();
 
-			} else if (position == lastSelectedPosition) {
-				radius = v.getRadiusReverse();
-				color = v.getColorReverse();
-			}
-		}
+            } else if (position == lastSelectedPosition) {
+                radius = v.getRadiusReverse();
+                color = v.getColorReverse();
+            }
+        }
 
-		paint.setColor(color);
-		canvas.drawCircle(coordinateX, coordinateY, radius, paint);
-	}
+        paint.setColor(color);
+        canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+    }
 }

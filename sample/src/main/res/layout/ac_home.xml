@@ -25,12 +25,16 @@
 
     <com.rd.PageIndicatorView
         android:id="@+id/pageIndicatorView"
-        app:piv_viewPager="@id/viewPager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="48dp"
+        app:piv_animationType="worm"
+        app:piv_selectedColor="@color/soshopPrimary"
+        app:piv_unselectedColor="@color/soshopBackground"
+        app:piv_unselectedDrawable="@drawable/ic_neumorphic_dots"
+        app:piv_viewPager="@id/viewPager"
         attrs:piv_padding="12dp"
         attrs:piv_radius="8dp" />
 

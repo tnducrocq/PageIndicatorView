@@ -2,11 +2,13 @@ package com.rd.pageindicatorview.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.viewpager.widget.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.ViewPager;
+
 import com.rd.PageIndicatorView;
 import com.rd.pageindicatorview.base.BaseActivity;
 import com.rd.pageindicatorview.customize.CustomizeActivity;
@@ -73,10 +75,10 @@ public class HomeActivity extends BaseActivity {
     @NonNull
     private List<View> createPageList() {
         List<View> pageList = new ArrayList<>();
-        pageList.add(createPageView(R.color.google_red));
-        pageList.add(createPageView(R.color.google_blue));
-        pageList.add(createPageView(R.color.google_yellow));
-        pageList.add(createPageView(R.color.google_green));
+        pageList.add(createPageView(R.color.soshopBackground));
+        pageList.add(createPageView(R.color.soshopBackground));
+        pageList.add(createPageView(R.color.soshopBackground));
+        pageList.add(createPageView(R.color.soshopBackground));
 
         return pageList;
     }

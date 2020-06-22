@@ -1,8 +1,11 @@
 package com.rd.draw.drawer.type;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+
 import androidx.annotation.NonNull;
+
 import com.rd.animation.data.Value;
 import com.rd.animation.data.type.SwapAnimationValue;
 import com.rd.draw.data.Indicator;
@@ -10,7 +13,7 @@ import com.rd.draw.data.Orientation;
 
 public class SwapDrawer extends BaseDrawer {
 
-    public SwapDrawer(@NonNull Paint paint, @NonNull Indicator indicator) {
+    public SwapDrawer(@NonNull Paint paint, @NonNull Indicator indicator, @NonNull Context context) {
         super(paint, indicator);
     }
 

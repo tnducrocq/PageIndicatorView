@@ -1,8 +1,11 @@
 package com.rd.draw.drawer.type;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+
 import androidx.annotation.NonNull;
+
 import com.rd.animation.data.Value;
 import com.rd.animation.data.type.ThinWormAnimationValue;
 import com.rd.draw.data.Indicator;
@@ -10,8 +13,8 @@ import com.rd.draw.data.Orientation;
 
 public class ThinWormDrawer extends WormDrawer {
 
-    public ThinWormDrawer(@NonNull Paint paint, @NonNull Indicator indicator) {
-        super(paint, indicator);
+    public ThinWormDrawer(@NonNull Paint paint, @NonNull Indicator indicator, Context context) {
+        super(paint, indicator, context);
     }
 
     public void draw(

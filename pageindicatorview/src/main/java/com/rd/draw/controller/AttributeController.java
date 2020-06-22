@@ -3,10 +3,11 @@ package com.rd.draw.controller;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.rd.animation.type.AnimationType;
 import com.rd.animation.type.BaseAnimation;
@@ -67,8 +68,10 @@ public class AttributeController {
 
     private void initColorAttribute(@NonNull TypedArray typedArray) {
         int unselectedColor = typedArray.getColor(R.styleable.PageIndicatorView_piv_unselectedColor, Color.parseColor(ColorAnimation.DEFAULT_UNSELECTED_COLOR));
+        int unselectedDrawable = typedArray.getResourceId(R.styleable.PageIndicatorView_piv_unselectedDrawable, -1);
         int selectedColor = typedArray.getColor(R.styleable.PageIndicatorView_piv_selectedColor, Color.parseColor(ColorAnimation.DEFAULT_SELECTED_COLOR));
 
+        indicator.setUnselectedDrawable(unselectedDrawable);
         indicator.setUnselectedColor(unselectedColor);
         indicator.setSelectedColor(selectedColor);
     }

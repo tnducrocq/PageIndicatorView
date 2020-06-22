@@ -20,6 +20,7 @@
         <attr name="piv_autoVisibility" format="boolean" />
 
         <attr name="piv_unselectedColor" format="color" />
+        <attr name="piv_unselectedDrawable" format="reference" />
         <attr name="piv_selectedColor" format="color" />
 
         <attr name="piv_fadeOnIdle" format="boolean" />

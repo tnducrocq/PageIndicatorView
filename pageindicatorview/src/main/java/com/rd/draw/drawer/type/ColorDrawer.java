@@ -1,5 +1,6 @@
 package com.rd.draw.drawer.type;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import androidx.annotation.NonNull;
@@ -9,7 +10,7 @@ import com.rd.draw.data.Indicator;
 
 public class ColorDrawer extends BaseDrawer {
 
-    public ColorDrawer(@NonNull Paint paint, @NonNull Indicator indicator) {
+    public ColorDrawer(@NonNull Paint paint, @NonNull Indicator indicator, @NonNull Context context) {
         super(paint, indicator);
     }
 

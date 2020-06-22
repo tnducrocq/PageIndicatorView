@@ -1,7 +1,9 @@
 package com.rd.draw.data;
 
-import androidx.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+
 import com.rd.animation.type.AnimationType;
 
 public class Indicator {
@@ -28,6 +30,7 @@ public class Indicator {
     private float scaleFactor; //For "Scale" animation only
 
     private int unselectedColor;
+    private int unselectedDrawable;
     private int selectedColor;
 
     private boolean interactiveAnimation;
@@ -137,6 +140,14 @@ public class Indicator {
 
     public void setUnselectedColor(int unselectedColor) {
         this.unselectedColor = unselectedColor;
+    }
+
+    public int getUnselectedDrawable() {
+        return unselectedDrawable;
+    }
+
+    public void setUnselectedDrawable(int unselectedDrawable) {
+        this.unselectedDrawable = unselectedDrawable;
     }
 
     public int getSelectedColor() {
